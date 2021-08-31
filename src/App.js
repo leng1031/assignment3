@@ -7,7 +7,7 @@ import {
   Link
 } from "react-router-dom";
 
-import RegisterUser from './component/ReigsterUser';
+import RegisterUser from './component/RegisterUser';
 import ListUser from './component/ListUser';
 //import TestPage from './component/UpdateUser';
 
@@ -38,9 +38,9 @@ class App extends React.Component {
               {/*  </div>*/}
               {/*</Route>*/}
               <Route path="/">
-                <div className='row h-100  justify-content-center'>
-                  <ListUser/>
-                </div>
+                {/*<div className='row h-100  justify-content-center'>*/}
+                {/*  <ListUser/>*/}
+                {/*</div>*/}
               </Route>
             </Switch>
           </Router>
