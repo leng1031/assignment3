@@ -9,7 +9,7 @@ import {
 
 import RegisterUser from './component/RegisterUser';
 import ListUser from './component/ListUser';
-//import TestPage from './component/UpdateUser';
+import UpdateUser from './component/UpdateUser';
 
 class App extends React.Component {
   render() {
@@ -19,7 +19,7 @@ class App extends React.Component {
             <nav>
               <ul>
                 <li>
-                  <Link to="/">Home</Link>
+                  <Link to="/list">Home</Link>
                 </li>
                 <li>
                   <Link to="/register">Register</Link>
@@ -32,15 +32,15 @@ class App extends React.Component {
                   <RegisterUser/>
                 </div>
               </Route>
-              {/*<Route path="/books/:id">*/}
-              {/*  <div className='row h-100  justify-content-center'>*/}
-              {/*    <TestPage/>*/}
-              {/*  </div>*/}
-              {/*</Route>*/}
-              <Route path="/">
-                {/*<div className='row h-100  justify-content-center'>*/}
-                {/*  <ListUser/>*/}
-                {/*</div>*/}
+              <Route path="/update/:id">
+                <div className='row h-100  justify-content-center'>
+                  <UpdateUser/>
+                </div>
+              </Route>
+              <Route path="/list">
+                <div className='row h-100  justify-content-center'>
+                  <ListUser/>
+                </div>
               </Route>
             </Switch>
           </Router>

@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import PropTypes from 'prop-types';
 import {isEmptyObject} from '../util/helpers';
+import { withRouter } from "react-router"
 
 class RegisterUser extends Component {
     constructor(props) {
@@ -66,7 +67,7 @@ class RegisterUser extends Component {
                 }
             }).then(response => {
                 alert("User created")
-                this.props.history.push("/profile")
+                this.props.history.push("/list")
             }).catch(error => {
                 this.setState({
                     response: error
@@ -165,4 +166,4 @@ class RegisterUser extends Component {
 }
 
 
-export default RegisterUser;
+export default withRouter(RegisterUser);
