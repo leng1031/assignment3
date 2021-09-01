@@ -36,9 +36,10 @@ class ListUser extends Component{
                 if (response.result)
                 {
                     alert("deleted")
+                    window.location.replace("http://localhost:3000/")
                     //console.log(window.location )
                     //this.props.history.push("/list")
-                    (window.location+"list").load()
+                    //(window.location+"list").load()
                 }
             })
         }
@@ -48,16 +49,17 @@ class ListUser extends Component{
         return(
             <div>
                 <table className={"table"}>
-                    {/*<th>*/}
-                    {/*    <td>id</td>*/}
-                    {/*    <td>User Name</td>*/}
-                    {/*    <td>Email</td>*/}
-                    {/*    <td>Password</td>*/}
-                    {/*    <td>Status</td>*/}
-                    {/*    <td>Action</td>*/}
-                    {/*</th>*/}
+                    <thead>
+                        <td>id</td>
+                        <td>User Name</td>
+                        <td>Email</td>
+                        <td>Password</td>
+                        <td>Status</td>
+                        <td>Action</td>
+                    </thead>
                     {this.state.data.map(item =>{
-                        return(<tr key={item.id}>
+                        return(<tbody>
+                            <tr key={item.id}>
                             <td><Link to ={`/update/${item.id}`}>{item.id}</Link></td>
                             <td>{item.username}</td>
                             <td>{item.email}</td>
@@ -66,7 +68,7 @@ class ListUser extends Component{
                             <td><a href={"http://localhost:3000/"} onClick={() => this.handleDelete(item.id)}>Delete</a></td>
                             {/*<td>{item.created_at.toLocaleTimeString()}</td>*/}
                             {/*<td>{item.modified_at}</td>*/}
-                        </tr>)
+                        </tr></tbody>)
                     })}
                 </table>
             </div>

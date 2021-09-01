@@ -67,7 +67,8 @@ class RegisterUser extends Component {
                 }
             }).then(response => {
                 alert("User created")
-                this.props.history.push("/list")
+                //this.props.history.push("/list")
+                window.location.replace("http://localhost:3000/")
             }).catch(error => {
                 this.setState({
                     response: error

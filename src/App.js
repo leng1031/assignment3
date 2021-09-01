@@ -19,7 +19,7 @@ class App extends React.Component {
             <nav>
               <ul>
                 <li>
-                  <Link to="/list">Home</Link>
+                  <Link to="/">Home</Link>
                 </li>
                 <li>
                   <Link to="/register">Register</Link>
@@ -37,7 +37,7 @@ class App extends React.Component {
                   <UpdateUser/>
                 </div>
               </Route>
-              <Route path="/list">
+              <Route path="/">
                 <div className='row h-100  justify-content-center'>
                   <ListUser/>
                 </div>

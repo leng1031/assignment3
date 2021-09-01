@@ -50,7 +50,8 @@ class UpdateUser extends Component {
         }).then(response => response.json()).then(response =>{
             console.log(response)
             alert("Updated")
-            this.props.history.push("/list")
+            //this.props.history.push("/list")
+            window.location.replace("http://localhost:3000/")
         })
     }
 
